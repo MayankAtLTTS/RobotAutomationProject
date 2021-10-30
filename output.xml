@@ -1,0 +1,690 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 3.2.2 (Python 3.9.7 on win32)" generated="20211019 21:57:24.015" rpa="false">
+<suite id="s1" name="RobotFrameworkProject" source="E:\L&amp;T\RobotAutomation\RobotFrameworkProject">
+<suite id="s1-s1" name="WomenSuite" source="E:\L&amp;T\RobotAutomation\RobotFrameworkProject\WomenSuite">
+<suite id="s1-s1-s1" name="Adding Tshirt To Cart Tests" source="E:\L&amp;T\RobotAutomation\RobotFrameworkProject\WomenSuite\adding_tshirt_to_cart_tests.robot">
+<test id="s1-s1-s1-t1" name="TC_1_Add_tshirt_into_cart">
+<kw name="Launch Browser" library="CommonFunctionality" type="setup">
+<kw name="Append To Environment Variable" library="OperatingSystem">
+<doc>Appends given ``values`` to environment variable ``name``.</doc>
+<arguments>
+<arg>Path</arg>
+<arg>${EXECDIR}${/}driver</arg>
+</arguments>
+<msg timestamp="20211019 21:57:25.926" level="INFO">Environment variable 'Path' set to value 'C:/Users/user/Downloads/eclipse/eclipse//plugins/org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_16.0.1.v20210528-1205/jre/bin/server;C:/Users/user/Downloads/eclipse/eclipse//plugins/org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_16.0.1.v20210528-1205/jre/bin;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files\dotnet\;C:\Program Files\Microsoft SQL Server\130\Tools\Binn\;C:\Program Files\Microsoft SQL Server\Client SDK\ODBC\170\Tools\Binn\;C:\Program Files (x86)\Microsoft SQL Server\150\Tools\Binn\;C:\Program Files\Microsoft SQL Server\150\Tools\Binn\;C:\Program Files\Microsoft SQL Server\150\DTS\Binn\;C:\Program Files (x86)\dotnet\;C:\Program Files\TortoiseGit\bin;C:\Program Files\TortoiseSVN\bin;C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\MSBuild\Current\Bin;C:\Program Files\Git\cmd;C:\Users\user\AppData\Local\Programs\Python\Python39\Scripts\;C:\Users\user\AppData\Local\Programs\Python\Python39\;C:\Users\user\AppData\Local\Microsoft\WindowsApps;C:\Users\user\AppData\Local\GitHubDesktop\bin;C:\Users\user\.dotnet\tools;C:\Users\user\Downloads\eclipse\eclipse;;E:\L&amp;T\RobotAutomation\RobotFrameworkProject\driver'.</msg>
+<status status="PASS" starttime="20211019 21:57:25.925" endtime="20211019 21:57:25.926"></status>
+</kw>
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>browser=${BROWSER}</arg>
+</arguments>
+<msg timestamp="20211019 21:57:25.927" level="INFO">Opening browser 'chrome' to base url 'None'.</msg>
+<status status="PASS" starttime="20211019 21:57:25.926" endtime="20211019 21:57:27.615"></status>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20211019 21:57:27.616" endtime="20211019 21:57:27.752"></status>
+</kw>
+<kw name="Set Selenium Implicit Wait" library="SeleniumLibrary">
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<arguments>
+<arg>50s</arg>
+</arguments>
+<status status="PASS" starttime="20211019 21:57:27.752" endtime="20211019 21:57:27.754"></status>
+</kw>
+<kw name="Set Screenshot Directory" library="SeleniumLibrary">
+<doc>Sets the directory for captured screenshots.</doc>
+<arguments>
+<arg>${EXECDIR}${/}Screenshots</arg>
+</arguments>
+<status status="PASS" starttime="20211019 21:57:27.755" endtime="20211019 21:57:27.756"></status>
+</kw>
+<kw name="Go To" library="SeleniumLibrary">
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<arguments>
+<arg>url=${URL}</arg>
+</arguments>
+<msg timestamp="20211019 21:57:27.757" level="INFO">Opening url 'http://automationpractice.com/index.php'</msg>
+<status status="PASS" starttime="20211019 21:57:27.756" endtime="20211019 21:57:43.362"></status>
+</kw>
+<status status="PASS" starttime="20211019 21:57:25.925" endtime="20211019 21:57:43.364"></status>
+</kw>
+<kw name="Adding T-Shirt into Cart Template">
+<arguments>
+<arg>11</arg>
+<arg>2</arg>
+<arg>14</arg>
+</arguments>
+<kw name="Automate Login" library="AutomateLogin">
+<doc>Automates Login procedure.
+This keyword uses global variable *${REGISTERED EMAIL ADDRESS}* and *${REGISTERED PASSWORD}*
+from *GlobalVariableResource.resource* file.
+*If the current credentials don't work then run registration_tests.robot in LoginSuite folder
+and update GlobalVariableResource.resource with those credentials.*
+This function doesnot Launch Browser or Close it.</doc>
+<kw name="Click Sign in" library="RegisterationAndLoginPage">
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${SIGN IN LOCATOR}</arg>
+</arguments>
+<msg timestamp="20211019 21:57:43.372" level="INFO">Clicking element 'xpath=//a[contains(text(),'Sign in')]'.</msg>
+<status status="PASS" starttime="20211019 21:57:43.371" endtime="20211019 21:57:56.337"></status>
+</kw>
+<status status="PASS" starttime="20211019 21:57:43.370" endtime="20211019 21:57:56.338"></status>
+</kw>
+<kw name="Enter Email to Sign in" library="RegisterationAndLoginPage">
+<arguments>
+<arg>${REGISTERED EMAIL ADDRESS}</arg>
+</arguments>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${SIGN IN EMAIL LOCATOR}</arg>
+<arg>${email}</arg>
+</arguments>
+<msg timestamp="20211019 21:57:56.343" level="INFO">Typing text 'John123@mayank.com' into text field 'id=email'.</msg>
+<status status="PASS" starttime="20211019 21:57:56.342" endtime="20211019 21:57:56.501"></status>
+</kw>
+<status status="PASS" starttime="20211019 21:57:56.339" endtime="20211019 21:57:56.502"></status>
+</kw>
+<kw name="Enter Password to Sign in" library="RegisterationAndLoginPage">
+<arguments>
+<arg>${REGISTERED PASSWORD}</arg>
+</arguments>
+<kw name="Input Password" library="SeleniumLibrary">
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${PASSWORD LOCATOR}</arg>
+<arg>${password}</arg>
+</arguments>
+<msg timestamp="20211019 21:57:56.505" level="INFO">Typing password into text field 'id=passwd'.</msg>
+<msg timestamp="20211019 21:57:56.566" level="INFO">Temporally setting log level to: NONE</msg>
+<msg timestamp="20211019 21:57:56.658" level="INFO">Log level changed from NONE to INFO.</msg>
+<status status="PASS" starttime="20211019 21:57:56.504" endtime="20211019 21:57:56.658"></status>
+</kw>
+<status status="PASS" starttime="20211019 21:57:56.503" endtime="20211019 21:57:56.659"></status>
+</kw>
+<kw name="Click Submit Login" library="RegisterationAndLoginPage">
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${SUBMIT LOGIN LOCATOR}</arg>
+</arguments>
+<msg timestamp="20211019 21:57:56.662" level="INFO">Clicking element 'id=SubmitLogin'.</msg>
+<status status="PASS" starttime="20211019 21:57:56.662" endtime="20211019 21:58:11.131"></status>
+</kw>
+<status status="PASS" starttime="20211019 21:57:56.660" endtime="20211019 21:58:11.132"></status>
+</kw>
+<kw name="Validate Successful Registration/Login" library="RegisterationAndLoginPage">
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<doc>Verifies that current page contains ``text``.</doc>
+<arguments>
+<arg>Order history and details</arg>
+</arguments>
+<msg timestamp="20211019 21:58:11.169" level="INFO">Current page contains text 'Order history and details'.</msg>
+<status status="PASS" starttime="20211019 21:58:11.134" endtime="20211019 21:58:11.170"></status>
+</kw>
+<status status="PASS" starttime="20211019 21:58:11.132" endtime="20211019 21:58:11.170"></status>
+</kw>
+<status status="PASS" starttime="20211019 21:57:43.369" endtime="20211019 21:58:11.171"></status>
+</kw>
+<kw name="Hover Over Menuitem Women" library="WomenPage">
+<kw name="Mouse Over" library="SeleniumLibrary">
+<doc>Simulates hovering the mouse over the element ``locator``.</doc>
+<arguments>
+<arg>${MENUITEM WOMEN LOCATOR}</arg>
+</arguments>
+<msg timestamp="20211019 21:58:11.173" level="INFO">Simulating Mouse Over on element 'xpath=//a[text()='Women']'.</msg>
+<status status="PASS" starttime="20211019 21:58:11.172" endtime="20211019 21:58:11.566"></status>
+</kw>
+<status status="PASS" starttime="20211019 21:58:11.171" endtime="20211019 21:58:11.568"></status>
+</kw>
+<kw name="Click Sub Menuitem T-Shirt" library="WomenPage">
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${SUB MENUITEM T-SHIRT LOCATOR}</arg>
+</arguments>
+<msg timestamp="20211019 21:58:11.578" level="INFO">Clicking element 'xpath=(//a[text()='T-shirts'])[1]'.</msg>
+<status status="PASS" starttime="20211019 21:58:11.575" endtime="20211019 21:58:23.627"></status>
+</kw>
+<status status="PASS" starttime="20211019 21:58:11.571" endtime="20211019 21:58:23.630"></status>
+</kw>
+<kw name="Hover Over Dress" library="WomenPage">
+<kw name="Mouse Over" library="SeleniumLibrary">
+<doc>Simulates hovering the mouse over the element ``locator``.</doc>
+<arguments>
+<arg>${DRESS IMG LOCATOR}</arg>
+</arguments>
+<msg timestamp="20211019 21:58:23.640" level="INFO">Simulating Mouse Over on element 'xpath=//img[@title='Faded Short Sleeve T-shirts']'.</msg>
+<status status="PASS" starttime="20211019 21:58:23.637" endtime="20211019 21:58:24.014"></status>
+</kw>
+<status status="PASS" starttime="20211019 21:58:23.632" endtime="20211019 21:58:24.016"></status>
+</kw>
+<kw name="Click More" library="WomenPage">
+<doc>Use this option to customize the purchase like quantity.</doc>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${MORE LOCATOR}</arg>
+</arguments>
+<msg timestamp="20211019 21:58:24.022" level="INFO">Clicking element 'xpath=//span[text()='More']'.</msg>
+<status status="PASS" starttime="20211019 21:58:24.020" endtime="20211019 21:58:34.717"></status>
+</kw>
+<status status="PASS" starttime="20211019 21:58:24.017" endtime="20211019 21:58:34.719"></status>
+</kw>
+<kw name="Enter Quantity" library="WomenPage">
+<arguments>
+<arg>${quantity}</arg>
+</arguments>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${QUANTITY LOCATOR}</arg>
+<arg>${quantity}</arg>
+</arguments>
+<msg timestamp="20211019 21:58:34.735" level="INFO">Typing text '11' into text field 'id=quantity_wanted'.</msg>
+<status status="PASS" starttime="20211019 21:58:34.733" endtime="20211019 21:58:34.882"></status>
+</kw>
+<status status="PASS" starttime="20211019 21:58:34.721" endtime="20211019 21:58:34.883"></status>
+</kw>
+<kw name="Select Size of Dress" library="WomenPage">
+<doc>Enter size value S for small, M for medium and L for large.</doc>
+<arguments>
+<arg>${size}</arg>
+</arguments>
+<kw name="Select From List By Value" library="SeleniumLibrary">
+<doc>Selects options from selection list ``locator`` by ``values``.</doc>
+<arguments>
+<arg>${SIZE LOCATOR}</arg>
+<arg>${size}</arg>
+</arguments>
+<msg timestamp="20211019 21:58:34.884" level="INFO">Selecting options from selection list 'id=group_1' by value 2.</msg>
+<status status="PASS" starttime="20211019 21:58:34.884" endtime="20211019 21:58:35.005"></status>
+</kw>
+<status status="PASS" starttime="20211019 21:58:34.883" endtime="20211019 21:58:35.005"></status>
+</kw>
+<kw name="Choose Color" library="WomenPage">
+<doc>Enter 13 for orange dress and 14 for blue dress.</doc>
+<arguments>
+<arg>${color}</arg>
+</arguments>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${COLOR LOCATOR}_${color}</arg>
+</arguments>
+<msg timestamp="20211019 21:58:35.010" level="INFO">Clicking element 'id=color_14'.</msg>
+<status status="PASS" starttime="20211019 21:58:35.008" endtime="20211019 21:58:35.112"></status>
+</kw>
+<status status="PASS" starttime="20211019 21:58:35.007" endtime="20211019 21:58:35.113"></status>
+</kw>
+<kw name="Click Add to Cart" library="WomenPage">
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${ADD TO CART LOCATOR}</arg>
+</arguments>
+<msg timestamp="20211019 21:58:35.117" level="INFO">Clicking element 'id=add_to_cart'.</msg>
+<status status="PASS" starttime="20211019 21:58:35.116" endtime="20211019 21:58:35.192"></status>
+</kw>
+<status status="PASS" starttime="20211019 21:58:35.115" endtime="20211019 21:58:35.193"></status>
+</kw>
+<kw name="Validate Item added to cart Successful" library="WomenPage">
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<doc>Verifies that current page contains ``text``.</doc>
+<arguments>
+<arg>Product successfully added to your shopping</arg>
+</arguments>
+<msg timestamp="20211019 21:58:35.253" level="INFO">Current page contains text 'Product successfully added to your shopping'.</msg>
+<status status="PASS" starttime="20211019 21:58:35.196" endtime="20211019 21:58:35.253"></status>
+</kw>
+<status status="PASS" starttime="20211019 21:58:35.193" endtime="20211019 21:58:35.254"></status>
+</kw>
+<kw name="Click Continue Shopping" library="WomenPage">
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${CONTINUE SHOPPING LOCATOR}</arg>
+</arguments>
+<msg timestamp="20211019 21:58:35.256" level="INFO">Clicking element 'xpath=//span[@title='Continue shopping']'.</msg>
+<status status="PASS" starttime="20211019 21:58:35.255" endtime="20211019 21:58:42.015"></status>
+</kw>
+<status status="PASS" starttime="20211019 21:58:35.254" endtime="20211019 21:58:42.016"></status>
+</kw>
+<status status="PASS" starttime="20211019 21:57:43.365" endtime="20211019 21:58:42.016"></status>
+</kw>
+<status status="PASS" starttime="20211019 21:57:25.922" endtime="20211019 21:58:42.017" critical="yes"></status>
+</test>
+<test id="s1-s1-s1-t2" name="TC_2_Add_tshirt_into_cart">
+<kw name="Launch Browser" library="CommonFunctionality" type="setup">
+<kw name="Append To Environment Variable" library="OperatingSystem">
+<doc>Appends given ``values`` to environment variable ``name``.</doc>
+<arguments>
+<arg>Path</arg>
+<arg>${EXECDIR}${/}driver</arg>
+</arguments>
+<msg timestamp="20211019 21:58:42.023" level="INFO">Environment variable 'Path' set to value 'C:/Users/user/Downloads/eclipse/eclipse//plugins/org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_16.0.1.v20210528-1205/jre/bin/server;C:/Users/user/Downloads/eclipse/eclipse//plugins/org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_16.0.1.v20210528-1205/jre/bin;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files\dotnet\;C:\Program Files\Microsoft SQL Server\130\Tools\Binn\;C:\Program Files\Microsoft SQL Server\Client SDK\ODBC\170\Tools\Binn\;C:\Program Files (x86)\Microsoft SQL Server\150\Tools\Binn\;C:\Program Files\Microsoft SQL Server\150\Tools\Binn\;C:\Program Files\Microsoft SQL Server\150\DTS\Binn\;C:\Program Files (x86)\dotnet\;C:\Program Files\TortoiseGit\bin;C:\Program Files\TortoiseSVN\bin;C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\MSBuild\Current\Bin;C:\Program Files\Git\cmd;C:\Users\user\AppData\Local\Programs\Python\Python39\Scripts\;C:\Users\user\AppData\Local\Programs\Python\Python39\;C:\Users\user\AppData\Local\Microsoft\WindowsApps;C:\Users\user\AppData\Local\GitHubDesktop\bin;C:\Users\user\.dotnet\tools;C:\Users\user\Downloads\eclipse\eclipse;;E:\L&amp;T\RobotAutomation\RobotFrameworkProject\driver;E:\L&amp;T\RobotAutomation\RobotFrameworkProject\driver'.</msg>
+<status status="PASS" starttime="20211019 21:58:42.022" endtime="20211019 21:58:42.024"></status>
+</kw>
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>browser=${BROWSER}</arg>
+</arguments>
+<msg timestamp="20211019 21:58:42.025" level="INFO">Opening browser 'chrome' to base url 'None'.</msg>
+<status status="PASS" starttime="20211019 21:58:42.024" endtime="20211019 21:58:43.859"></status>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20211019 21:58:43.860" endtime="20211019 21:58:44.102"></status>
+</kw>
+<kw name="Set Selenium Implicit Wait" library="SeleniumLibrary">
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<arguments>
+<arg>50s</arg>
+</arguments>
+<status status="PASS" starttime="20211019 21:58:44.102" endtime="20211019 21:58:44.107"></status>
+</kw>
+<kw name="Set Screenshot Directory" library="SeleniumLibrary">
+<doc>Sets the directory for captured screenshots.</doc>
+<arguments>
+<arg>${EXECDIR}${/}Screenshots</arg>
+</arguments>
+<status status="PASS" starttime="20211019 21:58:44.108" endtime="20211019 21:58:44.109"></status>
+</kw>
+<kw name="Go To" library="SeleniumLibrary">
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<arguments>
+<arg>url=${URL}</arg>
+</arguments>
+<msg timestamp="20211019 21:58:44.111" level="INFO">Opening url 'http://automationpractice.com/index.php'</msg>
+<status status="PASS" starttime="20211019 21:58:44.109" endtime="20211019 21:58:57.385"></status>
+</kw>
+<status status="PASS" starttime="20211019 21:58:42.021" endtime="20211019 21:58:57.386"></status>
+</kw>
+<kw name="Adding T-Shirt into Cart Template">
+<arguments>
+<arg>12</arg>
+<arg>2</arg>
+<arg>14</arg>
+</arguments>
+<kw name="Automate Login" library="AutomateLogin">
+<doc>Automates Login procedure.
+This keyword uses global variable *${REGISTERED EMAIL ADDRESS}* and *${REGISTERED PASSWORD}*
+from *GlobalVariableResource.resource* file.
+*If the current credentials don't work then run registration_tests.robot in LoginSuite folder
+and update GlobalVariableResource.resource with those credentials.*
+This function doesnot Launch Browser or Close it.</doc>
+<kw name="Click Sign in" library="RegisterationAndLoginPage">
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${SIGN IN LOCATOR}</arg>
+</arguments>
+<msg timestamp="20211019 21:58:57.396" level="INFO">Clicking element 'xpath=//a[contains(text(),'Sign in')]'.</msg>
+<status status="PASS" starttime="20211019 21:58:57.396" endtime="20211019 21:59:10.703"></status>
+</kw>
+<status status="PASS" starttime="20211019 21:58:57.395" endtime="20211019 21:59:10.704"></status>
+</kw>
+<kw name="Enter Email to Sign in" library="RegisterationAndLoginPage">
+<arguments>
+<arg>${REGISTERED EMAIL ADDRESS}</arg>
+</arguments>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${SIGN IN EMAIL LOCATOR}</arg>
+<arg>${email}</arg>
+</arguments>
+<msg timestamp="20211019 21:59:10.708" level="INFO">Typing text 'John123@mayank.com' into text field 'id=email'.</msg>
+<status status="PASS" starttime="20211019 21:59:10.707" endtime="20211019 21:59:10.867"></status>
+</kw>
+<status status="PASS" starttime="20211019 21:59:10.705" endtime="20211019 21:59:10.868"></status>
+</kw>
+<kw name="Enter Password to Sign in" library="RegisterationAndLoginPage">
+<arguments>
+<arg>${REGISTERED PASSWORD}</arg>
+</arguments>
+<kw name="Input Password" library="SeleniumLibrary">
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${PASSWORD LOCATOR}</arg>
+<arg>${password}</arg>
+</arguments>
+<msg timestamp="20211019 21:59:10.869" level="INFO">Typing password into text field 'id=passwd'.</msg>
+<msg timestamp="20211019 21:59:10.927" level="INFO">Temporally setting log level to: NONE</msg>
+<msg timestamp="20211019 21:59:11.012" level="INFO">Log level changed from NONE to INFO.</msg>
+<status status="PASS" starttime="20211019 21:59:10.869" endtime="20211019 21:59:11.012"></status>
+</kw>
+<status status="PASS" starttime="20211019 21:59:10.868" endtime="20211019 21:59:11.014"></status>
+</kw>
+<kw name="Click Submit Login" library="RegisterationAndLoginPage">
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${SUBMIT LOGIN LOCATOR}</arg>
+</arguments>
+<msg timestamp="20211019 21:59:11.016" level="INFO">Clicking element 'id=SubmitLogin'.</msg>
+<status status="PASS" starttime="20211019 21:59:11.015" endtime="20211019 21:59:24.577"></status>
+</kw>
+<status status="PASS" starttime="20211019 21:59:11.014" endtime="20211019 21:59:24.578"></status>
+</kw>
+<kw name="Validate Successful Registration/Login" library="RegisterationAndLoginPage">
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<doc>Verifies that current page contains ``text``.</doc>
+<arguments>
+<arg>Order history and details</arg>
+</arguments>
+<msg timestamp="20211019 21:59:24.613" level="INFO">Current page contains text 'Order history and details'.</msg>
+<status status="PASS" starttime="20211019 21:59:24.582" endtime="20211019 21:59:24.613"></status>
+</kw>
+<status status="PASS" starttime="20211019 21:59:24.579" endtime="20211019 21:59:24.613"></status>
+</kw>
+<status status="PASS" starttime="20211019 21:58:57.390" endtime="20211019 21:59:24.614"></status>
+</kw>
+<kw name="Hover Over Menuitem Women" library="WomenPage">
+<kw name="Mouse Over" library="SeleniumLibrary">
+<doc>Simulates hovering the mouse over the element ``locator``.</doc>
+<arguments>
+<arg>${MENUITEM WOMEN LOCATOR}</arg>
+</arguments>
+<msg timestamp="20211019 21:59:24.616" level="INFO">Simulating Mouse Over on element 'xpath=//a[text()='Women']'.</msg>
+<status status="PASS" starttime="20211019 21:59:24.615" endtime="20211019 21:59:25.099"></status>
+</kw>
+<status status="PASS" starttime="20211019 21:59:24.614" endtime="20211019 21:59:25.100"></status>
+</kw>
+<kw name="Click Sub Menuitem T-Shirt" library="WomenPage">
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${SUB MENUITEM T-SHIRT LOCATOR}</arg>
+</arguments>
+<msg timestamp="20211019 21:59:25.105" level="INFO">Clicking element 'xpath=(//a[text()='T-shirts'])[1]'.</msg>
+<status status="PASS" starttime="20211019 21:59:25.104" endtime="20211019 21:59:36.641"></status>
+</kw>
+<status status="PASS" starttime="20211019 21:59:25.102" endtime="20211019 21:59:36.643"></status>
+</kw>
+<kw name="Hover Over Dress" library="WomenPage">
+<kw name="Mouse Over" library="SeleniumLibrary">
+<doc>Simulates hovering the mouse over the element ``locator``.</doc>
+<arguments>
+<arg>${DRESS IMG LOCATOR}</arg>
+</arguments>
+<msg timestamp="20211019 21:59:36.652" level="INFO">Simulating Mouse Over on element 'xpath=//img[@title='Faded Short Sleeve T-shirts']'.</msg>
+<status status="PASS" starttime="20211019 21:59:36.650" endtime="20211019 21:59:37.067"></status>
+</kw>
+<status status="PASS" starttime="20211019 21:59:36.646" endtime="20211019 21:59:37.069"></status>
+</kw>
+<kw name="Click More" library="WomenPage">
+<doc>Use this option to customize the purchase like quantity.</doc>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${MORE LOCATOR}</arg>
+</arguments>
+<msg timestamp="20211019 21:59:37.076" level="INFO">Clicking element 'xpath=//span[text()='More']'.</msg>
+<status status="PASS" starttime="20211019 21:59:37.074" endtime="20211019 21:59:47.324"></status>
+</kw>
+<status status="PASS" starttime="20211019 21:59:37.070" endtime="20211019 21:59:47.327"></status>
+</kw>
+<kw name="Enter Quantity" library="WomenPage">
+<arguments>
+<arg>${quantity}</arg>
+</arguments>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${QUANTITY LOCATOR}</arg>
+<arg>${quantity}</arg>
+</arguments>
+<msg timestamp="20211019 21:59:47.343" level="INFO">Typing text '12' into text field 'id=quantity_wanted'.</msg>
+<status status="PASS" starttime="20211019 21:59:47.336" endtime="20211019 21:59:47.602"></status>
+</kw>
+<status status="PASS" starttime="20211019 21:59:47.329" endtime="20211019 21:59:47.605"></status>
+</kw>
+<kw name="Select Size of Dress" library="WomenPage">
+<doc>Enter size value S for small, M for medium and L for large.</doc>
+<arguments>
+<arg>${size}</arg>
+</arguments>
+<kw name="Select From List By Value" library="SeleniumLibrary">
+<doc>Selects options from selection list ``locator`` by ``values``.</doc>
+<arguments>
+<arg>${SIZE LOCATOR}</arg>
+<arg>${size}</arg>
+</arguments>
+<msg timestamp="20211019 21:59:47.607" level="INFO">Selecting options from selection list 'id=group_1' by value 2.</msg>
+<status status="PASS" starttime="20211019 21:59:47.606" endtime="20211019 21:59:47.757"></status>
+</kw>
+<status status="PASS" starttime="20211019 21:59:47.605" endtime="20211019 21:59:47.758"></status>
+</kw>
+<kw name="Choose Color" library="WomenPage">
+<doc>Enter 13 for orange dress and 14 for blue dress.</doc>
+<arguments>
+<arg>${color}</arg>
+</arguments>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${COLOR LOCATOR}_${color}</arg>
+</arguments>
+<msg timestamp="20211019 21:59:47.762" level="INFO">Clicking element 'id=color_14'.</msg>
+<status status="PASS" starttime="20211019 21:59:47.761" endtime="20211019 21:59:47.854"></status>
+</kw>
+<status status="PASS" starttime="20211019 21:59:47.759" endtime="20211019 21:59:47.855"></status>
+</kw>
+<kw name="Click Add to Cart" library="WomenPage">
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${ADD TO CART LOCATOR}</arg>
+</arguments>
+<msg timestamp="20211019 21:59:47.859" level="INFO">Clicking element 'id=add_to_cart'.</msg>
+<status status="PASS" starttime="20211019 21:59:47.859" endtime="20211019 21:59:47.916"></status>
+</kw>
+<status status="PASS" starttime="20211019 21:59:47.857" endtime="20211019 21:59:47.916"></status>
+</kw>
+<kw name="Validate Item added to cart Successful" library="WomenPage">
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<doc>Verifies that current page contains ``text``.</doc>
+<arguments>
+<arg>Product successfully added to your shopping</arg>
+</arguments>
+<msg timestamp="20211019 21:59:47.943" level="INFO">Current page contains text 'Product successfully added to your shopping'.</msg>
+<status status="PASS" starttime="20211019 21:59:47.918" endtime="20211019 21:59:47.943"></status>
+</kw>
+<status status="PASS" starttime="20211019 21:59:47.917" endtime="20211019 21:59:47.944"></status>
+</kw>
+<kw name="Click Continue Shopping" library="WomenPage">
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${CONTINUE SHOPPING LOCATOR}</arg>
+</arguments>
+<msg timestamp="20211019 21:59:47.945" level="INFO">Clicking element 'xpath=//span[@title='Continue shopping']'.</msg>
+<status status="PASS" starttime="20211019 21:59:47.944" endtime="20211019 21:59:55.557"></status>
+</kw>
+<status status="PASS" starttime="20211019 21:59:47.944" endtime="20211019 21:59:55.558"></status>
+</kw>
+<status status="PASS" starttime="20211019 21:58:57.388" endtime="20211019 21:59:55.558"></status>
+</kw>
+<status status="PASS" starttime="20211019 21:58:42.018" endtime="20211019 21:59:55.558" critical="yes"></status>
+</test>
+<test id="s1-s1-s1-t3" name="TC_3_Add_tshirt_into_cart">
+<kw name="Launch Browser" library="CommonFunctionality" type="setup">
+<kw name="Append To Environment Variable" library="OperatingSystem">
+<doc>Appends given ``values`` to environment variable ``name``.</doc>
+<arguments>
+<arg>Path</arg>
+<arg>${EXECDIR}${/}driver</arg>
+</arguments>
+<msg timestamp="20211019 21:59:55.563" level="INFO">Environment variable 'Path' set to value 'C:/Users/user/Downloads/eclipse/eclipse//plugins/org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_16.0.1.v20210528-1205/jre/bin/server;C:/Users/user/Downloads/eclipse/eclipse//plugins/org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_16.0.1.v20210528-1205/jre/bin;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files\dotnet\;C:\Program Files\Microsoft SQL Server\130\Tools\Binn\;C:\Program Files\Microsoft SQL Server\Client SDK\ODBC\170\Tools\Binn\;C:\Program Files (x86)\Microsoft SQL Server\150\Tools\Binn\;C:\Program Files\Microsoft SQL Server\150\Tools\Binn\;C:\Program Files\Microsoft SQL Server\150\DTS\Binn\;C:\Program Files (x86)\dotnet\;C:\Program Files\TortoiseGit\bin;C:\Program Files\TortoiseSVN\bin;C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\MSBuild\Current\Bin;C:\Program Files\Git\cmd;C:\Users\user\AppData\Local\Programs\Python\Python39\Scripts\;C:\Users\user\AppData\Local\Programs\Python\Python39\;C:\Users\user\AppData\Local\Microsoft\WindowsApps;C:\Users\user\AppData\Local\GitHubDesktop\bin;C:\Users\user\.dotnet\tools;C:\Users\user\Downloads\eclipse\eclipse;;E:\L&amp;T\RobotAutomation\RobotFrameworkProject\driver;E:\L&amp;T\RobotAutomation\RobotFrameworkProject\driver;E:\L&amp;T\RobotAutomation\RobotFrameworkProject\driver'.</msg>
+<status status="PASS" starttime="20211019 21:59:55.562" endtime="20211019 21:59:55.563"></status>
+</kw>
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>browser=${BROWSER}</arg>
+</arguments>
+<msg timestamp="20211019 21:59:55.564" level="INFO">Opening browser 'chrome' to base url 'None'.</msg>
+<status status="PASS" starttime="20211019 21:59:55.564" endtime="20211019 21:59:57.476"></status>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20211019 21:59:57.477" endtime="20211019 21:59:57.817"></status>
+</kw>
+<kw name="Set Selenium Implicit Wait" library="SeleniumLibrary">
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<arguments>
+<arg>50s</arg>
+</arguments>
+<status status="PASS" starttime="20211019 21:59:57.820" endtime="20211019 21:59:57.851"></status>
+</kw>
+<kw name="Set Screenshot Directory" library="SeleniumLibrary">
+<doc>Sets the directory for captured screenshots.</doc>
+<arguments>
+<arg>${EXECDIR}${/}Screenshots</arg>
+</arguments>
+<status status="PASS" starttime="20211019 21:59:57.852" endtime="20211019 21:59:57.854"></status>
+</kw>
+<kw name="Go To" library="SeleniumLibrary">
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<arguments>
+<arg>url=${URL}</arg>
+</arguments>
+<msg timestamp="20211019 21:59:57.857" level="INFO">Opening url 'http://automationpractice.com/index.php'</msg>
+<status status="PASS" starttime="20211019 21:59:57.855" endtime="20211019 22:00:13.029"></status>
+</kw>
+<status status="PASS" starttime="20211019 21:59:55.561" endtime="20211019 22:00:13.030"></status>
+</kw>
+<kw name="Adding T-Shirt into Cart Template">
+<arguments>
+<arg>13</arg>
+<arg>3</arg>
+<arg>13</arg>
+</arguments>
+<kw name="Automate Login" library="AutomateLogin">
+<doc>Automates Login procedure.
+This keyword uses global variable *${REGISTERED EMAIL ADDRESS}* and *${REGISTERED PASSWORD}*
+from *GlobalVariableResource.resource* file.
+*If the current credentials don't work then run registration_tests.robot in LoginSuite folder
+and update GlobalVariableResource.resource with those credentials.*
+This function doesnot Launch Browser or Close it.</doc>
+<kw name="Click Sign in" library="RegisterationAndLoginPage">
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${SIGN IN LOCATOR}</arg>
+</arguments>
+<msg timestamp="20211019 22:00:13.033" level="INFO">Clicking element 'xpath=//a[contains(text(),'Sign in')]'.</msg>
+<status status="PASS" starttime="20211019 22:00:13.033" endtime="20211019 22:00:27.994"></status>
+</kw>
+<status status="PASS" starttime="20211019 22:00:13.032" endtime="20211019 22:00:27.996"></status>
+</kw>
+<kw name="Enter Email to Sign in" library="RegisterationAndLoginPage">
+<arguments>
+<arg>${REGISTERED EMAIL ADDRESS}</arg>
+</arguments>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${SIGN IN EMAIL LOCATOR}</arg>
+<arg>${email}</arg>
+</arguments>
+<msg timestamp="20211019 22:00:28.017" level="INFO">Typing text 'John123@mayank.com' into text field 'id=email'.</msg>
+<status status="PASS" starttime="20211019 22:00:28.016" endtime="20211019 22:00:28.167"></status>
+</kw>
+<status status="PASS" starttime="20211019 22:00:28.013" endtime="20211019 22:00:28.167"></status>
+</kw>
+<kw name="Enter Password to Sign in" library="RegisterationAndLoginPage">
+<arguments>
+<arg>${REGISTERED PASSWORD}</arg>
+</arguments>
+<kw name="Input Password" library="SeleniumLibrary">
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${PASSWORD LOCATOR}</arg>
+<arg>${password}</arg>
+</arguments>
+<msg timestamp="20211019 22:00:28.169" level="INFO">Typing password into text field 'id=passwd'.</msg>
+<msg timestamp="20211019 22:00:28.229" level="INFO">Temporally setting log level to: NONE</msg>
+<msg timestamp="20211019 22:00:28.318" level="INFO">Log level changed from NONE to INFO.</msg>
+<status status="PASS" starttime="20211019 22:00:28.168" endtime="20211019 22:00:28.319"></status>
+</kw>
+<status status="PASS" starttime="20211019 22:00:28.167" endtime="20211019 22:00:28.320"></status>
+</kw>
+<kw name="Click Submit Login" library="RegisterationAndLoginPage">
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${SUBMIT LOGIN LOCATOR}</arg>
+</arguments>
+<msg timestamp="20211019 22:00:28.323" level="INFO">Clicking element 'id=SubmitLogin'.</msg>
+<status status="PASS" starttime="20211019 22:00:28.322" endtime="20211019 22:00:35.082"></status>
+</kw>
+<status status="PASS" starttime="20211019 22:00:28.321" endtime="20211019 22:00:35.083"></status>
+</kw>
+<kw name="Validate Successful Registration/Login" library="RegisterationAndLoginPage">
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<doc>Verifies that current page contains ``text``.</doc>
+<arguments>
+<arg>Order history and details</arg>
+</arguments>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20211019 22:00:41.974" level="FAIL">NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=94.0.4606.81)
+</msg>
+<status status="FAIL" starttime="20211019 22:00:41.950" endtime="20211019 22:00:41.974"></status>
+</kw>
+<msg timestamp="20211019 22:00:41.975" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=94.0.4606.81)
+</msg>
+<msg timestamp="20211019 22:00:41.981" level="FAIL">NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=94.0.4606.81)
+</msg>
+<status status="FAIL" starttime="20211019 22:00:35.087" endtime="20211019 22:00:41.982"></status>
+</kw>
+<status status="FAIL" starttime="20211019 22:00:35.085" endtime="20211019 22:00:41.983"></status>
+</kw>
+<status status="FAIL" starttime="20211019 22:00:13.032" endtime="20211019 22:00:41.984"></status>
+</kw>
+<status status="FAIL" starttime="20211019 22:00:13.030" endtime="20211019 22:00:41.986"></status>
+</kw>
+<status status="FAIL" starttime="20211019 21:59:55.559" endtime="20211019 22:00:41.988" critical="yes">NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=94.0.4606.81)
+</status>
+</test>
+<status status="FAIL" starttime="20211019 21:57:24.103" endtime="20211019 22:00:41.991"></status>
+</suite>
+<status status="FAIL" starttime="20211019 21:57:24.099" endtime="20211019 22:00:42.005"></status>
+</suite>
+<status status="FAIL" starttime="20211019 21:57:24.060" endtime="20211019 22:00:42.014"></status>
+</suite>
+<statistics>
+<total>
+<stat pass="2" fail="1">Critical Tests</stat>
+<stat pass="2" fail="1">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="2" fail="1" id="s1" name="RobotFrameworkProject">RobotFrameworkProject</stat>
+<stat pass="2" fail="1" id="s1-s1" name="WomenSuite">RobotFrameworkProject.WomenSuite</stat>
+<stat pass="2" fail="1" id="s1-s1-s1" name="Adding Tshirt To Cart Tests">RobotFrameworkProject.WomenSuite.Adding Tshirt To Cart Tests</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20211019 22:00:41.975" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=94.0.4606.81)
+</msg>
+</errors>
+</robot>
